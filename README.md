@@ -5,7 +5,7 @@ This program gathers input from the console as a string, then determines the bas
 * How to use interfaces in Java
 * What abstract classes are and how to use them
 * How to store data as a common type that can be shared between classes (binary bytes)
-* How to use a static >**_Factory_** class to build various <<interface>> objects
+* How to use a static **_`Factory`_** class to build various <<interface>> objects
 * How to convert between bases one byte at a time
 * Two's complement
 * How to read and use UML diagrams
