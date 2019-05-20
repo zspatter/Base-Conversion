@@ -40,7 +40,7 @@ public class NumberFactory
                     return null;
             }
         }
-        System.out.println("The input isn't a valid binary, octal, decimal, or hexadecimal number.";
+        System.out.println("The input isn't a valid binary, octal, decimal, or hexadecimal number.");
         return null;
     }
 }
