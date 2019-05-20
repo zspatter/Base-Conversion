@@ -1,38 +1,39 @@
 // print all converted values
 
+import java.math.BigInteger;
+
 abstract public class Number implements INumber
 {
-    private byte[] data;
+    protected BigInteger data;
 
     public abstract void fromString(String userString);
 
     public void fromNumber(INumber number)
     {
-        byte[] data = number.toBytes();
-        fromBytes(data);
+        this.data = number.toBigInt();
     }
 
-    public byte[] toBytes()
+    public BigInteger toBigInt()
     {
-        return data;
+        return this.data;
     }
 
-    public void fromBytes(byte[] data)
+    public void fromBigInt(BigInteger data)
     {
         this.data = data;
     }
 
     // how do take an INumber object and convert bin byte[] to a string of each number class?
-    public static void printConvertedValues(INumber number)
+    public static void printConvertedValues(INumber iNumber)
     {
         BinaryNumber binaryNumber = new BinaryNumber();
-        binaryNumber.fromNumber(number);
+        binaryNumber.fromNumber(iNumber);
         DecimalNumber decimalNumber = new DecimalNumber();
-        decimalNumber.fromNumber(number);
+        decimalNumber.fromNumber(iNumber);
         HexNumber hexNumber = new HexNumber();
-        hexNumber.fromNumber(number);
+        hexNumber.fromNumber(iNumber);
 
-        System.out.printf("Converted values:\n\tBinary: %s\n\tOctal: %s\n\tDecimal: %s\n\tHexadecimal: %s",
+        System.out.printf("Converted values:\n\tBinary: %s\n\tDecimal: %s\n\tHexadecimal: %s",
                 binaryNumber.toString(), decimalNumber.toString(), hexNumber.toString());
     }
 }
