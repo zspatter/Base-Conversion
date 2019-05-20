@@ -1,12 +1,14 @@
+import java.math.BigInteger;
+
 public interface INumber
 {
     String toString();
 
     void fromString(String userString);
 
-    byte[] toBytes();
+    BigInteger toBigInt();
 
     void fromNumber(INumber number);
 
-    void fromBytes(byte[] data);
+    void fromBigInt(BigInteger data);
 }
