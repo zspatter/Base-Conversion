@@ -35,11 +35,11 @@ abstract public class Number implements INumber
         HexNumber hexNumber = new HexNumber();
         hexNumber.fromNumber(iNumber);
 
-        System.out.printf("Converted values:" +
+        System.out.printf("\nConverted values:" +
                         "\n\tBinary: %s" +
                         "\n\tOctal: %s" +
                         "\n\tDecimal: %s" +
-                        "\n\tHexadecimal: %s",
+                        "\n\tHexadecimal: %s\n\n",
                 binaryNumber.toString(), octalNumber.toString(), decimalNumber.toString(), hexNumber.toString());
     }
 }
