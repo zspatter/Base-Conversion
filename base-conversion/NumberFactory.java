@@ -18,7 +18,7 @@ public class NumberFactory
 
 
         // how to handle standardized string (might be null)?
-        if (BinaryNumber.isValid(standardizedString) || OctalNumber.isValid(standardizedString) || DecimalNumber.isValid(standardizedString) || HexNumber.isValid(standardizedString))
+        if (BinaryNumber.isValid(standardizedString) || DecimalNumber.isValid(standardizedString) || HexNumber.isValid(standardizedString))
         {
             switch (baseIdentifier)
             {
@@ -26,10 +26,6 @@ public class NumberFactory
                     INumber binaryNumber = new BinaryNumber();
                     binaryNumber.fromString(standardizedString);
                     return binaryNumber;
-                case "0o":
-                    INumber octalNumber = new OctalNumber();
-                    octalNumber.fromString(standardizedString);
-                    return octalNumber;
                 case "0d":
                     INumber decimalNumber = new DecimalNumber();
                     decimalNumber.fromString(standardizedString);

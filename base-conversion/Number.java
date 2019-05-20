@@ -27,14 +27,12 @@ abstract public class Number implements INumber
     {
         BinaryNumber binaryNumber = new BinaryNumber();
         binaryNumber.fromNumber(number);
-        OctalNumber octalNumber = new OctalNumber();
-        octalNumber.fromNumber(number);
         DecimalNumber decimalNumber = new DecimalNumber();
         decimalNumber.fromNumber(number);
         HexNumber hexNumber = new HexNumber();
         hexNumber.fromNumber(number);
 
         System.out.printf("Converted values:\n\tBinary: %s\n\tOctal: %s\n\tDecimal: %s\n\tHexadecimal: %s",
-                binaryNumber.toString(), octalNumber.toString(), decimalNumber.toString(), hexNumber.toString());
+                binaryNumber.toString(), decimalNumber.toString(), hexNumber.toString());
     }
 }
