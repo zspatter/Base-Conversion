@@ -5,7 +5,7 @@ public class BinaryNumber extends Number
     @Override
     public String toString()
     {
-        return super.data.toString(2);
+        return "0b" + super.data.toString(2);
     }
 
     protected static boolean isValid(String userString)

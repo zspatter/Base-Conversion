@@ -2,9 +2,6 @@ import java.math.BigInteger;
 
 public class DecimalNumber extends Number
 {
-    // BigInteger modulo operation
-
-
     public static boolean isValid(String userString)
     {
         if (!userString.startsWith("0d"))
@@ -15,7 +12,7 @@ public class DecimalNumber extends Number
         for (char ch : digits)
         {
             if (ch >= '0' && ch <= '9')
-                break;
+                continue;
             else
             {
                 System.out.println("This input contains a digit that is invalid in binary." + ch);
@@ -23,7 +20,7 @@ public class DecimalNumber extends Number
             }
         }
 
-        return false;
+        return true;
     }
 
 
@@ -36,6 +33,6 @@ public class DecimalNumber extends Number
     @Override
     public String toString()
     {
-        return super.data.toString(10);
+        return "0d" + super.data.toString(10);
     }
 }

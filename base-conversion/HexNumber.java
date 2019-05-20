@@ -5,7 +5,7 @@ public class HexNumber extends Number
     @Override
     public String toString()
     {
-        return data.toString(16);
+        return "0x" + data.toString(16);
     }
 
     public static boolean isValid(String userString)
