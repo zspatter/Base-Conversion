@@ -28,12 +28,18 @@ abstract public class Number implements INumber
     {
         BinaryNumber binaryNumber = new BinaryNumber();
         binaryNumber.fromNumber(iNumber);
+        OctalNumber octalNumber = new OctalNumber();
+        octalNumber.fromNumber(iNumber);
         DecimalNumber decimalNumber = new DecimalNumber();
         decimalNumber.fromNumber(iNumber);
         HexNumber hexNumber = new HexNumber();
         hexNumber.fromNumber(iNumber);
 
-        System.out.printf("Converted values:\n\tBinary: %s\n\tDecimal: %s\n\tHexadecimal: %s",
-                binaryNumber.toString(), decimalNumber.toString(), hexNumber.toString());
+        System.out.printf("Converted values:" +
+                        "\n\tBinary: %s" +
+                        "\n\tOctal: %s" +
+                        "\n\tDecimal: %s" +
+                        "\n\tHexadecimal: %s",
+                binaryNumber.toString(), octalNumber.toString(), decimalNumber.toString(), hexNumber.toString());
     }
 }

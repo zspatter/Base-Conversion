@@ -27,6 +27,10 @@ public class NumberFactory
                     INumber binaryNumber = new BinaryNumber();
                     binaryNumber.fromString(standardizedString);
                     return binaryNumber;
+                case "0o":
+                    INumber octalNumber = new OctalNumber();
+                    octalNumber.fromString(standardizedString);
+                    return octalNumber;
                 case "0d":
                     INumber decimalNumber = new DecimalNumber();
                     decimalNumber.fromString(standardizedString);
