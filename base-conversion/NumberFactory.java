@@ -15,7 +15,8 @@ public class NumberFactory
     {
         String baseIdentifier = userString.substring(0, 2).toLowerCase();
         String standardizedString = standardizeString(userString);
-
+        if (standardizedString == null)
+            return null;
 
         // how to handle standardized string (might be null)?
         if (BinaryNumber.isValid(standardizedString) || DecimalNumber.isValid(standardizedString) || HexNumber.isValid(standardizedString))
@@ -39,7 +40,7 @@ public class NumberFactory
                     return null;
             }
         }
-        System.out.println("The input isn't a valid binary, octal, decimal, or hexadecimal number.");
+        System.out.println("The input isn't a valid binary, octal, decimal, or hexadecimal number.";
         return null;
     }
 }
