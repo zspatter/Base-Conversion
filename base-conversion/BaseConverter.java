@@ -22,7 +22,7 @@ public class BaseConverter
                         "\n\tPrefix %s0o%s: %3s for octal values" +
                         "\n\tPrefix %s0d%s: %3s for decimal values" +
                         "\n\tPrefix %s0x%s: %3s for hexadecimal values" +
-                        "\n\tEnter %sEXIT%s: %2s to terminate\n",
+                        "\n\tEnter %sEXIT%s: %2s to terminate\n\n",
                 ANSI_BOLD, ANSI_RESET, PADDING,
                 ANSI_BOLD, ANSI_RESET, PADDING,
                 ANSI_BOLD, ANSI_RESET, PADDING,
