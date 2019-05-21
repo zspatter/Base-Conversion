@@ -13,7 +13,8 @@ public class DecimalNumber extends Number
         {
             if (!(ch >= '0' && ch <= '9'))
             {
-                System.out.println("This input contains a digit that is invalid in binary." + ch);
+                System.out.printf("\n%sThis input contains a digit that is invalid in decimal: %c%s",
+                        ANSI_RED, ch, ANSI_RESET);
                 return false;
             }
         }

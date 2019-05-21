@@ -31,7 +31,8 @@ public class HexNumber extends Number
 
             if (!validChar)
             {
-                System.out.println("This input contains a character that is invalid in hexadecimal.");
+                System.out.printf("\n%sThis input contains a digit that is invalid in hexadecimal: %c%s",
+                        ANSI_RED, checkedChar, ANSI_RESET);
                 return false;
             }
         }
