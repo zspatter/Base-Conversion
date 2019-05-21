@@ -2,7 +2,7 @@
 This program gathers input from the console as a string, then determines the base of the input. It then converts binary/octal/decimal/hexadecimal values to binary bytes for storage. It can then convert to any of the other base types as required.
 
 ## Sample Output
-![alt text](https://github.com/zspatter/base-conversion/blob/master/sample_output.PNG)
+![sample console output](https://github.com/zspatter/base-conversion/blob/master/sample_output.png)
 
 ## What I Learned
 * How to read a string and determine it's base
