@@ -14,7 +14,7 @@ This program gathers input from the console as a string, then determines the bas
 * StringBuilder class
 
 ## Tasks
-- [ ] Finish the decimal base class implementation (last base class)
-- [ ] Follow up on issue with returning unsigned binary bytes
-- [ ] Investigate alternative common data storage options such as BigInteger
+- [x] Finish the decimal base class implementation (last base class)
+- [x] Follow up on issue with returning unsigned binary bytes
+- [x] Investigate alternative common data storage options such as BigInteger
 - [ ] Add support for hex strings with spaces between individual bytes (2 digits) as input
