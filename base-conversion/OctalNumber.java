@@ -11,9 +11,7 @@ public class OctalNumber extends Number
 
         for (char ch : digits)
         {
-            if (ch >= '0' && ch <= '7')
-                continue;
-            else
+            if (!(ch >= '0' && ch <= '7'))
             {
                 System.out.println("This input contains a digit that is invalid in binary." + ch);
                 return false;

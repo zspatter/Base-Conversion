@@ -18,7 +18,6 @@ public class NumberFactory
         if (standardizedString == null)
             return null;
 
-        // how to handle standardized string (might be null)?
         if (BinaryNumber.isValid(standardizedString) || OctalNumber.isValid(standardizedString)
                 || DecimalNumber.isValid(standardizedString) || HexNumber.isValid(standardizedString))
         {

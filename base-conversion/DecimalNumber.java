@@ -11,18 +11,14 @@ public class DecimalNumber extends Number
 
         for (char ch : digits)
         {
-            if (ch >= '0' && ch <= '9')
-                continue;
-            else
+            if (!(ch >= '0' && ch <= '9'))
             {
                 System.out.println("This input contains a digit that is invalid in binary." + ch);
                 return false;
             }
         }
-
         return true;
     }
-
 
     @Override
     public void fromString(String userString)

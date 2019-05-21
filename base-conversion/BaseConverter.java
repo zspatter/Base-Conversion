@@ -58,5 +58,4 @@ public class BaseConverter
             Number.printConvertedValues(iNumber);
         }
     }
-
 }
