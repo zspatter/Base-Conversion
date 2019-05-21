@@ -20,7 +20,8 @@ public class BinaryNumber extends Number
                 break;
             else
             {
-                System.out.println("This input contains a digit that is invalid in binary." + ch);
+                System.out.printf("\n%sThis input contains a digit that is invalid in binary: %c%s",
+                        ANSI_RED, ch, ANSI_RESET);
                 return false;
             }
         }

@@ -6,10 +6,11 @@ abstract public class Number implements INumber
 {
     protected BigInteger data;
 
-    private static final String ANSI_BOLD = "\033[1m";
-    private static final String ANSI_YELLOW = "\033[33m";
-    private static final String ANSI_RESET = "\033[0m";
-    private static final String PADDING = "";
+    protected static final String ANSI_BOLD = "\033[1m";
+    protected static final String ANSI_RED = "\033[31m";
+    protected static final String ANSI_YELLOW = "\033[33m";
+    protected static final String ANSI_RESET = "\033[0m";
+    protected static final String PADDING = "";
 
     public abstract void fromString(String userString);
 
