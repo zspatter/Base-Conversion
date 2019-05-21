@@ -44,7 +44,11 @@ public class NumberFactory
                     return null;
             }
         }
-        System.out.println("The input isn't a valid binary, octal, decimal, or hexadecimal number.");
+        String ansi_red = "\033[31m";
+        String ansi_reset = "\033[0m";
+
+        System.out.printf("\n%sThe input isn't a valid binary, octal, decimal, or hexadecimal number.%s\n\n",
+                ansi_red, ansi_reset);
         return null;
     }
 }
