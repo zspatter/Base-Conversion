@@ -15,10 +15,11 @@ public class NumberFactory
     {
         String baseIdentifier = userString.substring(0, 2).toLowerCase();
         String standardizedString = standardizeString(userString);
+        if (standardizedString == null)
+            return null;
 
-
-        // how to handle standardized string (might be null)?
-        if (BinaryNumber.isValid(standardizedString) || OctalNumber.isValid(standardizedString) || DecimalNumber.isValid(standardizedString) || HexNumber.isValid(standardizedString))
+        if (BinaryNumber.isValid(standardizedString) || OctalNumber.isValid(standardizedString)
+                || DecimalNumber.isValid(standardizedString) || HexNumber.isValid(standardizedString))
         {
             switch (baseIdentifier)
             {
