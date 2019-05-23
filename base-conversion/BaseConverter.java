@@ -15,6 +15,9 @@ public class BaseConverter
         converterLoop();
     }
 
+    /**
+     * Prints menu to console indicating how to interact with the system
+     */
     private static void printMenu()
     {
         System.out.printf("Choose one of the following options:" +
@@ -30,6 +33,10 @@ public class BaseConverter
                 ANSI_BOLD, ANSI_RESET, PADDING);
     }
 
+    /**
+     * Continually loops through the system prompting the user for new
+     * numeric inputs to convert until the client explicitly exits
+     */
     private static void converterLoop()
     {
         while (true)
@@ -42,18 +49,6 @@ public class BaseConverter
             INumber iNumber = NumberFactory.getNumber(input);
             if (!(iNumber instanceof Number))
                 continue;
-//            Number number;
-//
-//            if (iNumber instanceof BinaryNumber)
-//                number = (BinaryNumber) iNumber;
-//            else if (iNumber instanceof OctalNumber)
-//                number = (OctalNumber) iNumber;
-//            else if (iNumber instanceof DecimalNumber)
-//                number = (DecimalNumber) iNumber;
-//            else if (iNumber instanceof HexNumber)
-//                number = (HexNumber) iNumber;
-//            else
-//                continue;
 
             Number.printConvertedValues(iNumber);
         }
