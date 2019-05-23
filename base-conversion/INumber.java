@@ -8,7 +8,7 @@ public interface INumber
 
     BigInteger toBigInt();
 
-    void fromNumber(INumber number);
+    void fromNumber(INumber iNumber);
 
     void fromBigInt(BigInteger data);
 }

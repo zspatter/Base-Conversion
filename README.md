@@ -1,4 +1,9 @@
 # Base-Conversion
+[![Java Version](https://img.shields.io/badge/java-8%2B-orange.svg)](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+<br>
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b73e55a064a649d2a05236e06d4fcd6b)](https://www.codacy.com/app/localhost_2/base-conversion?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=zspatter/base-conversion&amp;utm_campaign=Badge_Grade)
+
 This program gathers input from the console as a string, then determines the base of the input. It then converts binary/octal/decimal/hexadecimal values to BigInteger for storage. It can then convert to any of the other base types as required.
 
 ## Sample Output
