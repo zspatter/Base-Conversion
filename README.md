@@ -12,10 +12,9 @@ This program gathers input from the console as a string, then determines the bas
 </p>
 
 ## What I Learned
-* Interfaces in Java
-* What abstract classes are and how to use them
-* How to store data as a common type that can be shared between classes (BigInteger)
-* How to use a static `Factory` class to build various `<<interface>>` objects
+* Interfaces and abstract classes in Java
+* How to store data as a common type that can be shared between classes (`BigInteger`)
+* How to the `Factory` design pattern to build various `<<interface>>` objects
 * How to convert between bases one byte at a time
 * Two's complement
 * UML notation
