@@ -58,7 +58,7 @@ public class NumberFactory
                     hexNumber.fromString(standardizedString);
                     return hexNumber;
                 default:
-                    System.out.println("I don't know how to convert that type of number");
+                    System.out.println("Number not recognized");
                     return null;
             }
         }
