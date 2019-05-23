@@ -2,12 +2,12 @@ import java.math.BigInteger;
 
 public class HexNumber extends Number
 {
-    @Override
-    public String toString()
-    {
-        return "0x" + data.toString(16).toUpperCase();
-    }
-
+    /**
+     * Determines whether or not a given string is a valid hexadecimal number
+     *
+     * @param userString string gathered from client (called from NumberFactory)
+     * @return boolean indicating whether the number is valid
+     */
     public static boolean isValid(String userString)
     {
         char[] hexDigits = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
@@ -39,9 +39,20 @@ public class HexNumber extends Number
         return true;
     }
 
+    /**
+     * Converts input from string to Number's standard representation (BigInteger)
+     *
+     * @param userString string gathered from the client (prefix identifier is removed)
+     */
     @Override
     public void fromString(String userString)
     {
         super.data = new BigInteger(userString.substring(2), 16);
+    }
+
+    @Override
+    public String toString()
+    {
+        return "0x" + data.toString(16).toUpperCase();
     }
 }

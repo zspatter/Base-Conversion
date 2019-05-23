@@ -6,6 +6,7 @@ abstract public class Number implements INumber
 {
     protected BigInteger data;
 
+    // constants used to format console output
     protected static final String ANSI_BOLD = "\033[1m";
     protected static final String ANSI_RED = "\033[31m";
     protected static final String ANSI_YELLOW = "\033[33m";
@@ -14,21 +15,45 @@ abstract public class Number implements INumber
 
     public abstract void fromString(String userString);
 
-    public void fromNumber(INumber number)
+    /**
+     * Converts iNumber (any number that implements the INumber interface)
+     * to this number type. This allows for any given base to be converted to
+     * any other base
+     * 
+     * @param iNumber any INumber object (binary/octal/decimal/hex)
+     */
+    public void fromNumber(INumber iNumber)
     {
-        this.data = number.toBigInt();
+        this.data = iNumber.toBigInt();
     }
 
+    /**
+     * Returns the internal representation of BigInteger for any base
+     *
+     * @return BigInteger representing the number (base agnostic)
+     */
     public BigInteger toBigInt()
     {
         return this.data;
     }
 
+    /**
+     * Converts any BigInteger value to a Number
+     *
+     * @param data BigInteger value
+     */
     public void fromBigInt(BigInteger data)
     {
         this.data = data;
     }
 
+    /**
+     * This is the user-facing function that displays the input converted to
+     * each base this converter supports. This will print a standard, formatted
+     * string to the console indicating the equivalencies in different base systems
+     *
+     * @param iNumber any INumber object can be read (bin/oct/dec/hex)
+     */
     public static void printConvertedValues(INumber iNumber)
     {
         BinaryNumber binaryNumber = new BinaryNumber();

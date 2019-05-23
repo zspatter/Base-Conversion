@@ -2,6 +2,12 @@ import java.math.BigInteger;
 
 public class OctalNumber extends Number
 {
+    /**
+     * Determines whether or not a given string is a valid octal number
+     *
+     * @param userString string gathered from client (called from NumberFactory)
+     * @return boolean indicating whether the number is valid
+     */
     public static boolean isValid(String userString)
     {
         if (!userString.startsWith("0o"))
@@ -21,6 +27,11 @@ public class OctalNumber extends Number
         return true;
     }
 
+    /**
+     * Converts input from string to Number's standard representation (BigInteger)
+     *
+     * @param userString string gathered from the client (prefix identifier is removed)
+     */
     @Override
     public void fromString(String userString)
     {

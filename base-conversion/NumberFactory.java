@@ -1,5 +1,14 @@
 public class NumberFactory
 {
+    /**
+     * Takes a string gathered from the user and standardizes the input.
+     * This ensures the system is case insensitive as the base identifier
+     * prefix is converted to lowercase and all other digits are converted
+     * to uppercase
+     *
+     * @param userString input gathered from client
+     * @return standardized string
+     */
     private static String standardizeString(String userString)
     {
         if (userString.length() >= 2)
@@ -11,6 +20,15 @@ public class NumberFactory
         return null;
     }
 
+    /**
+     * This function is the backbone of the entire system. This takes a string
+     * parameter and determines whether the string is a valid number as well as
+     * which base the number is in. Assuming the number is valid, this constructs
+     * and returns the relevant Number object
+     *
+     * @param userString input from client representing a number
+     * @return relevant Number type
+     */
     public static INumber getNumber(String userString)
     {
         String baseIdentifier = userString.substring(0, 2).toLowerCase();
