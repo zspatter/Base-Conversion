@@ -8,7 +8,7 @@ This program gathers input from the console as a string, then determines the bas
 
 ## Sample Output
 <p align=center>
-  <img src=https://github.com/zspatter/base-conversion/blob/master/sample_output.png alt=sample console output height=1100>
+  <img src=./sample_output.png alt=sample console output height=1100>
 </p>
 
 ## What I Learned
